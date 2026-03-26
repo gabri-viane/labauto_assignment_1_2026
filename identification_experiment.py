@@ -41,7 +41,7 @@ t = np.arange(0, Duration + Tc, Tc)  # Ensure inclusion of Duration if possible
 
 f0=1.0
 f1=500.0 # Tc=0.001 Fc=1000Hz, Shannon/Nyquist 500Hz
-A=50.0
+A=500.0
 joint_number=0  # array index
 chirp_signal = A*chirp(t, f0=f0, f1=f1, t1=Duration, method='logarithmic')
 
@@ -85,8 +85,8 @@ while ml.depending_instructions():
     robot.write_actuator_value(joint_torque)
 
     robot.simulate()
-    computation_time = time.perf_counter() - loop_t0
-    time.sleep(max(0.0, Tc - computation_time))
+    #computation_time = time.perf_counter() - loop_t0
+    #time.sleep(max(0.0, Tc - computation_time))
 
 
 

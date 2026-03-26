@@ -65,7 +65,7 @@ for itest in range(0,40):
     ml.set_initial_condition(q0)
 
     # Define a sequence of motion instructions
-    initial_position = [0.0] * dof
+    initial_position = [0.5] * dof
     instructions = ["pause: 1", f"move: {initial_position}", "pause: 5"]
     ml.add_instructions(instructions)
 
@@ -98,8 +98,8 @@ for itest in range(0,40):
         robot.write_actuator_value(joint_torque)
         robot.simulate()
 
-        computation_time = time.perf_counter() - loop_t0
-        time.sleep(max(0.0, Tc - computation_time))
+        #computation_time = time.perf_counter() - loop_t0
+        #time.sleep(max(0.0, Tc - computation_time))
 
 
     measured_signal, control_action=  [], []

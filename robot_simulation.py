@@ -64,6 +64,7 @@ ml.add_instructions(gcode_instr)
 joint_torque = robot.read_actuator_value()
 feedforward_action = np.zeros(dof)
 
+print(f" dof: {dof}")
 decentralized_ctrl.starting(initial_reference, measured_output, joint_torque, feedforward_action)
 
 
@@ -92,8 +93,8 @@ while ml.depending_instructions():
     robot.simulate()
 
     # run close to real-time for teaching demos
-    computation_time = time.perf_counter() - loop_t0
-    time.sleep(max(0.0, Tc - computation_time))
+    #computation_time = time.perf_counter() - loop_t0
+    #time.sleep(max(0.0, Tc - computation_time))
 
 t = np.array(t)
 measured_signal = np.array(measured_signal)
