@@ -6,8 +6,8 @@ controller:
   cascade_controllers:
   - name: "joint1"
     inner:
-      Kp: 25.0
-      Ki: 2.0
+      Kp: 249
+      Ki: 996
       Kd: 0.0
     outer:
       Kp: 5.0
@@ -15,8 +15,8 @@ controller:
       Kd: 0.0
   - name: "joint2"
     inner:
-      Kp: 50.0
-      Ki: 1.0
+      Kp: 168
+      Ki: 756
       Kd: 0.0
     outer:
       Kp: 5.0
@@ -24,8 +24,8 @@ controller:
       Kd: 0.0
   - name: "joint3"
     inner:
-      Kp: 30.0
-      Ki: 15.0
+      Kp: 139
+      Ki: 1390
       Kd: 0.0
     outer:
       Kp: 15.0
