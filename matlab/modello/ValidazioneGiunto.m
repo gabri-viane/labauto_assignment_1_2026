@@ -49,7 +49,7 @@ for itest=1:length(tests)
     end
     
     figure
-    h=bodeplot(freq_resp_validation,'k', bode_opts);
+    h=bodeplot(freq_resp_validation,'w', bode_opts);
     grid on
     hold on
     showConfidence(h,3)
