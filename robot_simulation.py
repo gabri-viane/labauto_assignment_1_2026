@@ -93,8 +93,8 @@ while ml.depending_instructions():
     robot.simulate()
 
     # run close to real-time for teaching demos
-    #computation_time = time.perf_counter() - loop_t0
-    #time.sleep(max(0.0, Tc - computation_time))
+    computation_time = time.perf_counter() - loop_t0
+    time.sleep(max(0.0, Tc - computation_time))
 
 t = np.array(t)
 measured_signal = np.array(measured_signal)
