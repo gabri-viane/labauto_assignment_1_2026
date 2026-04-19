@@ -17,10 +17,11 @@ bode_opts.PhaseWrapping = 'on';
 
 for itest=1:length(tests)
     load([tests(itest).folder,filesep,tests(itest).name])
-    fprintf('Giunto=%d\n',joint_number+1);
-    fprintf('Chirp con Ampiezza %f da %f a %f\n',A,f0,f1)
+    fprintf('Test n°%d\n',itest);
+    fprintf('\tGiunto=%d\n',joint_number+1);
+    fprintf('\tChirp con Ampiezza %f da %f a %f\n',A,f0,f1)
     punto_di_lavoro=mean(joint_position);
-    fprintf('Punto di lavoro [%f %f]\n',punto_di_lavoro(1),punto_di_lavoro(2))
+    fprintf('\tPunto di lavoro [%f %f]\n',punto_di_lavoro(1),punto_di_lavoro(2))
 
 
     ngiunto=joint_number+1;

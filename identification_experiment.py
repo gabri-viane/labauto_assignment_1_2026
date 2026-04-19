@@ -39,10 +39,10 @@ Tc = robot.get_sampling_period()
 Duration = 30.0 # seconds
 t = np.arange(0, Duration + Tc, Tc)  # Ensure inclusion of Duration if possible
 
-f0=1.0
+f0=0.1
 f1=500.0 # Tc=0.001 Fc=1000Hz, Shannon/Nyquist 500Hz
-A=50.0
-joint_number=2  # array index
+A=35.0
+joint_number=0  # array index
 chirp_signal = A*chirp(t, f0=f0, f1=f1, t1=Duration, method='logarithmic')
 
 
