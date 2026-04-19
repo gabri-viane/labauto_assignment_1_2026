@@ -9,6 +9,11 @@ controller:
       Kp: 249
       Ki: 996
       Kd: 0.0
+      filters_on_error_signal:
+        - type: NotchFilter
+            natural_frequency: 605
+            zeros_damping: 0.1
+            poles_damping: 0.6
     outer:
       Kp: 5.0
       Ki: 0.0
@@ -18,6 +23,11 @@ controller:
       Kp: 168
       Ki: 756
       Kd: 0.0
+      filters_on_error_signal:
+        - type: NotchFilter
+            natural_frequency: 660
+            zeros_damping: 0.1
+            poles_damping: 0.4
     outer:
       Kp: 5.0
       Ki: 0.0
@@ -27,6 +37,11 @@ controller:
       Kp: 139
       Ki: 1390
       Kd: 0.0
+      filters_on_error_signal:
+        - type: NotchFilter
+            natural_frequency: 900
+            zeros_damping: 0.1
+            poles_damping: 0.3
     outer:
       Kp: 15.0
       Ki: 0.0
