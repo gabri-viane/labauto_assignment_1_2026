@@ -1,7 +1,7 @@
 controller:
   motion_law_parameters:
-    max_velocity: [28, 28, 28]
-    max_acceleration: [5.5, 5.5, 10]
+    max_velocity: [100, 100, 100]
+    max_acceleration: [15, 15, 10]
 
   cascade_controllers:
   - name: "joint1"
@@ -15,8 +15,8 @@ controller:
           zeros_damping: 0.1
           poles_damping: 0.6
     outer:
-      Kp: 5.0
-      Ki: 0.0
+      Kp: 500
+      Ki: 0
       Kd: 0.0
   - name: "joint2"
     inner:
@@ -30,8 +30,8 @@ controller:
           poles_damping: 0.4
 
     outer:
-      Kp: 5.0
-      Ki: 0.0
+      Kp: 500
+      Ki: 0
       Kd: 0.0
   - name: "joint3"
     inner:
