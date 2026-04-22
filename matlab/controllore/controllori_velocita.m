@@ -10,9 +10,10 @@ function [C, notch, P] = carica_controllore(jointNumber,wc,wn, xci_z, xci_p)
     s=tf('s');
     P=tf(modello_continuo);
     wi=wc/20; % pulsazione azione integrale
-    Ti=1/wi;
+    Ti=1/wi
     Co=1+1/(Ti*s);
     notch=(s^2+2*xci_z*wn*s+wn^2)/(s^2+2*xci_p*wn*s+wn^2);
-    Kp=1/abs(freqresp(Co*P*notch,wc));
+    Kp=1/abs(freqresp(Co*P*notch,wc))
     C=Kp*Co;
+    Ki = Kp/Ti
 end
