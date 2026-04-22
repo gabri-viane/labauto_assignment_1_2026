@@ -1,7 +1,7 @@
 controller:
   motion_law_parameters:
     max_velocity: [100, 100, 100]
-    max_acceleration: [70, 70, 10]
+    max_acceleration: [200,200 , 10]
 
   cascade_controllers:
   - name: "joint1"
