@@ -1,9 +1,9 @@
 %% Validazione: modello in diversi punti di lavoro.
 % Carico i risultati del test nei vari working point (wp)
 
-clc;clear all;close all;
+clc;clear;close all;
 joint_number=1;
-load(["model_joint"+joint_number])
+load("./matlab/modello/risultati/model_joint"+joint_number)
 
 model_name = 'gantry_portal_sea_soft';
 folder_path = fullfile('..', 'labauto_assignment_1_2026', model_name, 'tests');

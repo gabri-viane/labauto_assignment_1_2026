@@ -5,7 +5,7 @@
 
 clc;clear;close all;
 joint_number=1;
-load("./matlab/modello/risultati/model joint/model_joint"+joint_number+".mat")
+load("./matlab/modello/risultati/model_joint"+joint_number+".mat")
 
 model_name = 'gantry_portal_sea_soft';
 folder_path = fullfile('..', 'labauto_assignment_1_2026', model_name, 'tests');

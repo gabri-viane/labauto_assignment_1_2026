@@ -42,7 +42,7 @@ t = np.arange(0, Duration + Tc, Tc)  # Ensure inclusion of Duration if possible
 f0=0.1
 f1=500.0 # Tc=0.001 Fc=1000Hz, Shannon/Nyquist 500Hz
 A=50.0
-joint_number=0  # array index
+joint_number=2  # array index
 chirp_signal = A*chirp(t, f0=f0, f1=f1, t1=Duration, method='logarithmic')
 
 
@@ -131,7 +131,7 @@ test_data = {
     "A": A,
     "time": t
 }
-savemat(f"{model_name}/tests/chirp_experiment_joint{joint_number+1}_{timestamp}.mat", {key: test_data[key] for key in test_data})
+savemat(f"{model_name}/tests/chirp_experiment_joint{joint_number+1}_A{A}_{timestamp}.mat", {key: test_data[key] for key in test_data})
 #
 # # Plot results in 3x2 grid
 # fig, axes = plt.subplots(3, 2, figsize=(10, 10))
