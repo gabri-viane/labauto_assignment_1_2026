@@ -61,7 +61,7 @@ from scipy.signal import chirp
 Duration = 20.0  # seconds
 t = np.arange(0, Duration + Tc, Tc)  # Ensure inclusion of Duration if possible
 
-f0 = 1.0
+f0 = 0.1
 f1 = 500.0
 A = 40.0
 joint_number = 2
