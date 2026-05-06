@@ -4,7 +4,7 @@
 % Carico i risultati del test
 
 clc;clear;close all;
-joint_number=1;
+joint_number=3;
 load("./matlab/modello/risultati/model_joint"+joint_number+".mat")
 
 model_name = 'gantry_portal_sea_soft';
@@ -49,7 +49,7 @@ for itest=1:length(tests)
         end
     end
     
-    figure
+    figure()
     h=bodeplot(freq_resp_validation,'w', bode_opts);
     grid on
     hold on
