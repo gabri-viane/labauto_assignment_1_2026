@@ -56,8 +56,7 @@ joint_torque = robot.read_actuator_value()
 feedforward_action = np.array([0.0]*dof)
 decentralized_ctrl.starting(initial_reference, measured_output, joint_torque, feedforward_action)
 
-for itest in range(0,1):
-
+for itest in range(0,10):
 
     ml = TrapezoidalMotionLaw(motion_law_params, Tc)
     measured_output = robot.read_sensor_value()
@@ -72,7 +71,7 @@ for itest in range(0,1):
     f0 = 0.1+9.9*np.random.rand(1)[0] # random number between 0.1 and 10
     f1 = 100.0+400.0*np.random.rand(1)[0] # random number between 100 and 500
     A = 50.0+50.0*np.random.rand(1)[0] # random number between 5 and 15
-    joint_number =0# np.random.randint(dof) # ??????????if random number <0.5, use joint 0,  otherwise joint 1
+    joint_number = 2# np.random.randint(dof) # ??????????if random number <0.5, use joint 0,  otherwise joint 1
 
     if np.random.rand(1)[0]>0.5: # 50% chance to invert f0 and f1
         tmp=f0
