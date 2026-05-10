@@ -1,6 +1,13 @@
 clear
 close all
-load("trajectory_finale_09_05_22_12_initial_control.mat")
+
+if 1 == 0 
+    filename = "trajectory_finale_09_05_22_12_initial_control.mat";
+else
+    filename = "trajectory_finale_09_05_22_12.mat";
+end
+
+load(filename)
 figure
 subplot(3,3,1)
 joint_position=reference_position(:,1)-joint_position(:,1);
@@ -24,7 +31,7 @@ legend('Coppia')
 xlabel('Tempo [s]')
 ylabel('Coppia [N*m]')
 
-load("trajectory_finale_09_05_22_12_initial_control.mat")
+load(filename)
 joint_position=reference_position(:,2)-joint_position(:,2);
 joint_velocity=reference_velocity(:,2)-joint_velocity(:,2);
 joint_torque=joint_torque(:,2);
@@ -47,7 +54,7 @@ legend('Coppia')
 xlabel('Tempo [s]')
 ylabel('Coppia [N*m]')
 
-load("trajectory_finale_09_05_22_12_initial_control.mat")
+load(filename)
 joint_position=reference_position(:,3)-joint_position(:,3);
 joint_velocity=reference_velocity(:,3)-joint_velocity(:,3);
 joint_torque=joint_torque(:,3);
